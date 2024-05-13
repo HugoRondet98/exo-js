@@ -11,8 +11,8 @@
   */
 const tab = [1,2,3,4,5,6,7,8,9,10];
 let f = e => e*2
-const multiplyByTwo = tab.map(f) ;
-console.log(multiplyByTwo);
+const multiplyByTwo = tab => tab.map(f) ;
+console.log(multiplyByTwo(tab));
 
 
 
@@ -27,8 +27,8 @@ console.log(multiplyByTwo);
   */
 
 const tab2 = ["Auvergne", "Rhone", "Ardeche", "Loire", "Limousin", "Marne", "Landes", "Ardene"];
-const filterNameStartByA = tab2.filter(element => element.startsWith("A"));
-console.log(filterNameStartByA);
+const filterNameStartByA = tab2 => tab2.filter(element => element.startsWith("A"));
+console.log(filterNameStartByA(tab2));
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
  * retourne la somme des valeurs du tableau
@@ -40,8 +40,8 @@ console.log(filterNameStartByA);
   */
 
 const tab3 = [1,2,3,4,5,6,7,8,9,10];
-const sum = tab3.reduce((x,y) => x+y);
-console.log(sum);
+const sum = tab3 => tab3.reduce((x,y) => x+y,0);
+console.log(sum(tab3));
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -72,6 +72,5 @@ const tab4 = [
 const findUserById = (tab, id) => tab.find(element => element.id == id ).name;
 
 console.log(findUserById(tab4,3));
-
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};

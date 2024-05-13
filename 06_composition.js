@@ -8,8 +8,10 @@
  *  - for, foreach, while, do while sont interdits
  */
 
-const 
-const concat = (arr1, arr2) => {}
+const tab1 = [1, 2, 3];
+const tab2 = [4, 5, 6];
+const fusion = [...tab1, ...tab2];
+console.log(fusion);
 
 /**
  * utiliser l'opérateur de composition ... afin d'ajouter un élément à un tableau
@@ -20,7 +22,9 @@ const concat = (arr1, arr2) => {}
  * - ne pas utiliser la méthode push
  */
 
-const push = (arr, item) => {}
+const tab3 = [1, 2, 3];
+const push = [...tab3, 4];
+console.log(push);
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
