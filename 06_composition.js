@@ -8,6 +8,7 @@
  *  - for, foreach, while, do while sont interdits
  */
 
+const 
 const concat = (arr1, arr2) => {}
 
 /**
