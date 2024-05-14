@@ -14,7 +14,7 @@
 
 const tab1 = [1, 2, 3];
 const extractFirstTwo = (tab) => {
-    [first, second, ...rest] = tab; 
+    const [first, second] = tab; 
     const newTab1 = [first, second];
     return newTab1;
 };
@@ -30,7 +30,7 @@ console.log(extractFirstTwo(tab1));
 
 const tab2 = [1, 2, 3];
 const extractRest = (tab) => {
-    [first, ...rest] = tab;
+    const [first, ...rest] = tab;
     const newTab2 = [...rest];
     return newTab2;
 }
@@ -50,6 +50,7 @@ console.log(extractRest(tab2));
 
 // const obj1 = {name: "toto", age: 42};
 // const extractName = (obj) => {
+//     const 
 //     {name} = obj;
 //     return first;
 // }
