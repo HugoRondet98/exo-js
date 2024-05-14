@@ -20,7 +20,7 @@ const user = {
     name: "hugo", 
     group: null,
 };
-const getGroupName = (x) => x.group?.name;
+const getGroupName = (x) => x.group?.name ?? undefined;
 console.log(getGroupName(user));
 
 module.exports = {getGroupName};
