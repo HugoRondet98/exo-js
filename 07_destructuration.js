@@ -31,8 +31,7 @@ console.log(extractFirstTwo(tab1));
 const tab2 = [1, 2, 3];
 const extractRest = (tab) => {
     const [first, ...rest] = tab;
-    const newTab2 = [...rest];
-    return newTab2;
+    return rest;
 }
 console.log(extractRest(tab2));
 
@@ -48,13 +47,12 @@ console.log(extractRest(tab2));
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
 
-// const obj1 = {name: "toto", age: 42};
-// const extractName = (obj) => {
-//     const 
-//     {name} = obj;
-//     return first;
-// }
-// console.log(extractName(obj1));
+const obj1 = {name: "toto", age: 42};
+const extractName = (obj) => {
+    const {name} = obj;
+    return name;
+}
+console.log(extractName(obj1));
 
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
@@ -67,6 +65,8 @@ console.log(extractRest(tab2));
  * 
  */
 
-const removePassword = () => {};
+const obj2 = {firstname: "toto", lastname: "titi", age: 42, password: "1234"};
+const removePassword = ({password, ...restObj}) => restObj;
+console.log(removePassword(obj2));
 
 // module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
