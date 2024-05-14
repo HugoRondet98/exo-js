@@ -10,8 +10,8 @@
 
 const tab1 = [1, 2, 3];
 const tab2 = [4, 5, 6];
-const fusion = [...tab1, ...tab2];
-console.log(fusion);
+const concat = (tab1, tab2) => [...tab1, ...tab2];
+console.log(concat(tab1, tab2));
 
 /**
  * utiliser l'opérateur de composition ... afin d'ajouter un élément à un tableau
@@ -23,8 +23,8 @@ console.log(fusion);
  */
 
 const tab3 = [1, 2, 3];
-const push = [...tab3, 4];
-console.log(push);
+const push = tab3 => [...tab3, 4];
+console.log(push(tab3));
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
@@ -32,7 +32,10 @@ console.log(push);
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
 
-const merge = (obj1, obj2) => {}
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+const merge = (obj1, obj2) => ({...obj1, ...obj2});
+console.log(merge(obj1, obj2));
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
@@ -43,7 +46,9 @@ const merge = (obj1, obj2) => {}
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = (obj, name) => {}
+const obj3 = {name: 'toto', age: 46};
+const setName = (obj) => ({...obj, name: "titi"});
+console.log(setName(obj3));
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
-module.exports = {concat, push, merge, setName}
+// module.exports = {concat, push, merge, setName}
