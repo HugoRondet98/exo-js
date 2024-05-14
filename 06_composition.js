@@ -51,4 +51,5 @@ const setName = (obj, name) => ({...obj, name: name}); // on peut simplifier le 
 console.log(setName(obj3, 'titi'));
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
-// module.exports = {concat, push, merge, setName}
+
+module.exports = {concat, push, merge, setName}

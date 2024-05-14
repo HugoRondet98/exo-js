@@ -69,4 +69,4 @@ const obj2 = {firstname: "toto", lastname: "titi", age: 42, password: "1234"};
 const removePassword = ({password, ...restObj}) => restObj;
 console.log(removePassword(obj2));
 
-// module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
+module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
