@@ -23,8 +23,8 @@ console.log(concat(tab1, tab2));
  */
 
 const tab3 = [1, 2, 3];
-const push = tab3 => [...tab3, 4];
-console.log(push(tab3));
+const push = (tab3, x) => [...tab3, x];
+console.log(push(tab3, 4));
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
